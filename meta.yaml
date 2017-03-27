@@ -1,0 +1,13 @@
+package:
+    name: cartopy_offlinedata
+    version: "0.1"
+
+source:
+    path: ./src/
+
+requirements:
+  build:
+    - python
+  run:
+    - python
+
