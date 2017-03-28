@@ -6,4 +6,4 @@ test:
   script:
     - conda install conda-build -y -q
     - conda build . --no-test
-    - conda install --use-local cartopy_offlinedata -y -q
+    - conda install -y -q --use-local cartopy_offlinedata
