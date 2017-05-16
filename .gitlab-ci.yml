@@ -1,9 +1,8 @@
 image: continuumio/miniconda3:latest
 
 test:
-  only: 
+  only:
     - develop
   script:
-    - conda install conda-build -y -q
-    - conda build . --no-test
-    - conda install -y -q --use-local cartopy_offlinedata
+    - pip install -e .
+    - which download_cartopy_data.sh
