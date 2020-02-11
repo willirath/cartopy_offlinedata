@@ -4,6 +4,8 @@
 import os
 import logging
 
+__version_info__ = (0, 17, 0)
+__version__ = '.'.join(str(vi) for vi in __version_info__)
 
 def update_config(config):
     '''Set cartopy's pre_existing_data_dir to $CARTOPY_OFFLINE_SHARED.'''
