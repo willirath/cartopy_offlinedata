@@ -12,7 +12,7 @@ echo ""
 target_dir=$1
 mkdir -p ${target_dir}
 
-# create tmp dir 
+# create tmp dir
 [[ -n ${TMPDIR} ]] || TMPDIR=/tmp
 tmp_dir=${TMPDIR}/`date +%s%N`_get_full_cartopy
 mkdir ${tmp_dir}
@@ -20,9 +20,8 @@ mkdir ${tmp_dir}
 # cd to tmp dir, get cartopy source, download data to repo data path
 (
     cd ${tmp_dir}
-    git clone https://github.com/SciTools/cartopy.git
-    python \
-        cartopy/tools/feature_download.py \
+    wget https://raw.githubusercontent.com/SciTools/cartopy/v0.17.0/tools/feature_download.py
+    python feature_download.py \
         --output ${target_dir} cultural-extra cultural gshhs physical \
         --ignore-repo-data
 )
