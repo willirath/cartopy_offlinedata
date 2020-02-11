@@ -10,19 +10,20 @@ echo ""
 
 # read target dir
 target_dir=$1
-mkdir -p ${target_dir}
+mkdir -p "${target_dir}"
 
-# create tmp dir 
+# create tmp dir
 [[ -n ${TMPDIR} ]] || TMPDIR=/tmp
 tmp_dir=${TMPDIR}/`date +%s%N`_get_full_cartopy
-mkdir ${tmp_dir}
+mkdir "${tmp_dir}"
+
+version=`python -c "import cartopy_userconfig; print(cartopy_userconfig.__version__)"`
 
 # cd to tmp dir, get cartopy source, download data to repo data path
 (
-    cd ${tmp_dir}
-    git clone https://github.com/SciTools/cartopy.git
-    python \
-        cartopy/tools/feature_download.py \
+    cd "${tmp_dir}"
+    wget https://raw.githubusercontent.com/SciTools/cartopy/v${version}/tools/feature_download.py
+    python feature_download.py \
         --output ${target_dir} cultural-extra cultural gshhs physical \
         --ignore-repo-data
 )
