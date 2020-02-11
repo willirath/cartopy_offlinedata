@@ -1,9 +1,9 @@
 from setuptools import setup
 
 setup(name='cartopy_offlinedata',
-      version='0.2',
+      version='0.2.0',
       description='Add shared data path to cartopy config',
-      url='https://git.geomar.de/open-source/cartopy_offlinedata',
+      url='https://github.com/willirath/cartopy_offlinedata',
       author='Willi Rath',
       author_email='wrath@geomar.de',
       license='MIT',
