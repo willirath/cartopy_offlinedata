@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # how to use?
 echo "Usage:" $0 "<target dir>"
