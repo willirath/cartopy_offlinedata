@@ -10,8 +10,7 @@ def update_config(config):
 
     try:
         config['pre_existing_data_dir'] = os.environ['CARTOPY_OFFLINE_SHARED']
-
-        logging.warning(
+        logging.info(
             'Setting cartopy.config["pre_existing_data_dir"] to {}.'
             ' Don\'t worry, this is probably intended behaviour to avoid'
             ' failing downloads of geological data behind a firewall.'
