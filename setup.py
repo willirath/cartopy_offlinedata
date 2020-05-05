@@ -8,5 +8,5 @@ setup(name='cartopy_offlinedata',
       author_email='wrath@geomar.de',
       license='MIT',
       packages=['cartopy_userconfig'],
-      scripts=['bin/download_cartopy_data.sh'],
+      scripts=['bin/download_cartopy_data.py'],
       zip_safe=False)
